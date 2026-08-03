@@ -32,6 +32,8 @@ height: 340px;
 <main>
     <div>
     <p>Por: Mharia Klara Padilha e Eduarda Ydaaj</p>
+    <button>❤️<span>0</span></button>
+
     <h2>Descubra técnicas, estilos e dicas para aprimorar a sua arte</h2>
         <p>A pintura é uma das formas de expressão artística mais antiga da humanidade. Por meio das cores, formas e texturas, artistas trasmitem emoções, ideias e histórias.</p>
         <h2>historia da pintura</h2>
@@ -90,8 +92,10 @@ height: 340px;
 
 </body>
 <script>
-    const botao = document.querySelector("button");
+    const botoes = document.querySelector("button");
+
 botao.addEventListener("click", botaoClicado);
+botoes.forEach(function(botao) {
 
   function botaoClicado() {
 console.log("fui clicado");
@@ -99,6 +103,6 @@ console.log("fui clicado");
 let texto = botao.querySelector("span");
 texto.textContent++;
 }
-
+})
 </script>
 </html>
